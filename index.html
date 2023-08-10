@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <title>Carrossel3</title>
+</head>
+<body>
+    
+<h1>3 Teste de carrossel</h1>
+</br>
+
+<!--Carrossel-->    
+<div class="slider"> <!--Corpo do Carrossel-->  
+    <div class="slides"> <!--Slides do Carrossel-->  
+        <!--Radio bottons (as bolinhas de baixo do slider)-->
+<input type="radio" name="radio-btn" id="radio1"> <!--São os botôes que de fato controlam o Carrossel-->  
+<input type="radio" name="radio-btn" id="radio2">
+<input type="radio" name="radio-btn" id="radio3">
+<input type="radio" name="radio-btn" id="radio4">
+
+        <!--Imagens do slider(carrossel)-->
+        <div class="img-slide first"> <!--Div importante ela indica qual é a primeira imagem do carrossel-->   
+        <img src="84vgg93865d11.webp" alt="img1" id="m1">
+    </div>
+    <div class="img-slide">
+        <img src="tanjiro-cosplay-featured-image.avif" alt="img2" id="m2">
+    </div>
+    <div class="img-slide">
+        <img src="kirua-zoldyck-killua-hunter-x-walldevil-1024x576.jpg" alt="img3" id="m3">
+    </div>
+    <div class="img-slide">
+        <img src="Some_anime_at_SF-bok_-_GBG,_27_mars_2007.jpg" alt="img4" id="m4">
+    </div>
+
+    <!--Navegação("as bordas das bolinhas")-->
+<div class="Navegacao"> <!--referente a borda do botao / representam as bolinhas-->
+<div class="nav-btn1"></div> <!--Presentação visual dos botões(bolinhas)-->  
+<div class="nav-btn2"></div> 
+<div class="nav-btn3"></div>
+<div class="nav-btn4"></div>
+</div>
+
+    </div>
+
+<!--correspondente aos botões radio(como se ficasse por cima deles)quando elas 
+    são clicada assiciona os botões radio-->
+<div class="manual-navegaca">
+    <label for="radio1" class="manual-btn"></label> 
+    <label for="radio2" class="manual-btn"></label>
+    <label for="radio3" class="manual-btn"></label>
+    <label for="radio4" class="manual-btn"></label>
+</div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Outra forma de instuturar os botões
+<div class="Navegacao">
+    <div class="nav-btn1">
+        <label for="radio1" class="manual-btn">
+            <input type="radio" name="radio-btn" id="radio1">
+        </label>
+    </div>
+    Outros elementos de navegação aqui 
+</div> -->
+
+<!-- Outra maneira de instruturar
+<div class="Navegacao">
+    <button class="nav-btn1">
+        <label for="radio1" class="manual-btn">
+            <input type="radio" name="radio-btn" id="radio1">
+        </label>
+    </button>
+     Outros elementos de navegação aqui 
+</div>
+
+O importante é que o elemento <label> está vinculando o atributo for ao id do <input>, 
+
+
+Ambas as partes são importantes para fornecer diferentes formas de navegação pelo carrossel. 
+Enquanto os botões de rádio <input type="radio"> permitem a navegação automática e são controlados pelo 
+JavaScript para criar uma rotação automática das imagens, as "bolinhas" de navegação e os 
+botões de navegação manual (<label>) permitem aos usuários escolherem diretamente qual imagem exibir.    
+-->
+

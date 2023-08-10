@@ -1,0 +1,120 @@
+body {
+    background-color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    font-size: 45px;
+    color: #fff;
+    text-align: center; 
+    margin: 25px; 
+    
+}
+
+.slider {
+    margin: 0 auto; /*não tem margem em cima nem embaixo / margens laterais automaticas */
+    width: 800px;
+    height: 400px;
+    overflow: hidden; /*Qualquer imagem que ultrapassar o tamanho do carrosel(slide) sera cortado*/
+}
+
+.slides {
+    /*Que o tamanho do slide caiba as imagens slides = 400%, img = 100%, cada*/
+    width: 400%; /*referente a quantidade de imagens*/
+    height: 400px;
+    display: flex; /*Deixa os slides fléxiveis, nesse caso para poder alinhalos*/  
+}
+
+.slides input { /* formatando os input do slides, ou seja os botões*/
+    display: none; /*sumir com os botoões*/   
+}
+
+.img-slide { /* divs das imagens (img-slide) dentro do slides(dentro de slider)*/
+width: 25%;
+position: relative;
+transition: 2s; /*transição das imagens*/
+}
+
+.img-slide img { /*imagens dos img-slide dentro do slides(dentro de slider)*/
+    width:800px ;
+}
+
+.manual-navegaca {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) { /*formatar os botoes, menos o ultimo*/
+    margin-right: 40px; /*mover os botoes, menos o ultimo*/
+}
+
+.manual-btn:hover { /*quando o cursor passar por cima*/
+    background-color: #fff;
+}
+
+/*Quando clicar no botão ele ira para outra imagem do carrosel, referente ao botão*/
+#radio1:checked ~ .first { /*quando o botão tiver ativo/clicado/marcado*/
+margin-left: 0;}
+
+#radio2:checked ~ .first { 
+margin-left: -25%; }
+
+#radio3:checked ~ .first { 
+margin-left: -50%; }
+
+#radio4:checked ~ .first { 
+margin-left: -75%; }
+
+/*para esta "animação" funcionar você deve indicar qual imagem e a primeira,
+ para assim o proprío programa entender a ordem das imagens
+ Nesse caso indicamos a  <div class="img-slide first"> que contém a primeira imagem*/
+
+.Navegacao div {
+    border:  2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.Navegacao {
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+/*Vamos ajustar eles com o manual-btn*/
+.Navegacao div:not(:last-child) { /*last-child(ultimo filho), ou seja ultimo elemento*/
+    margin-right: 40px; /*Espaçamento*/
+}
+
+/*Iremos deixar o fundo da bolinha prenchido, quando a imagem referente estiver selecionado*/
+#radio1:checked ~ .Navegacao .nav-btn1 {
+    background-color: #fff; } 
+/*Quando o botao (nav-btn) estiver ativo/marcado/selecionado, ele estara com o fundo branco*/
+#radio2:checked ~ .Navegacao .nav-btn2 {
+    background-color: #fff; }
+
+#radio3:checked ~ .Navegacao .nav-btn3 {
+    background-color: #fff; }
+
+#radio4:checked ~ .Navegacao .nav-btn4 {
+     background-color: #fff; }
+
+
+
+     /*Ao usar display: flex; em um contêiner, 
+     você ganha a capacidade de alinhar, distribuir e posicionar os elementos filho 
+     de maneira mais flexível e responsiva. */
